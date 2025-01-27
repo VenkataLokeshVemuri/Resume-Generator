@@ -8,6 +8,9 @@ function updateResume() {
     updateListPreview('skills-container', 'previewSkills', 'Your Skills');
     updateListPreview('experience-container', 'previewExperience', 'Your Experience');
     updateListPreview('projects-container', 'previewProjects', 'Your Projects');
+    updateListPreview('hobbies-container', 'previewHobbies', 'Your Hobbies');
+    updateListPreview('reference-container', 'previewReference', 'Your Reference');
+    updateListPreview('languages-container', 'previewLanguages', 'Your Languages');
 }
 
 function updateListPreview(containerId, previewId, defaultText) {
@@ -34,7 +37,7 @@ function addInputBox(containerId) {
     newInput.classList.add(`${containerId}-input`);
     const input = document.createElement('input');
     input.type = 'text';
-    input.style.width = '100%';
+    input.style.width = '90%';
     input.style.marginRight = '10px';
     input.oninput = updateResume;
     newInput.appendChild(input);
@@ -45,7 +48,7 @@ function generatePDF() {
     const resumeContent = document.getElementById('resumePreview');
     console.log(resumeContent.innerHTML);
 
-   
+    // Generate the PDF
     html2pdf().from(resumeContent).save();
 }
 
@@ -61,6 +64,21 @@ function createResumePreview() {
             <p id="previewdob">Your DOB</p>
         </div>
         <hr>
+         <h3>Education</h3>
+        <ul id="previewEducation">
+            <li>Your Education</li>
+        </ul>
+        <hr>
+         <h3>Languages</h3>
+        <ul id="previewLanguages">
+            <li>Your Languages</li>
+        </ul>
+        <hr>
+         <h3>Hobbies</h3>
+        <ul id="previewHobbies">
+            <li>Your Hobbies</li>
+        </ul>
+        <hr>
         <h3>Skills</h3>
         <ul id="previewSkills">
             <li>Your Skills</li>
@@ -71,16 +89,17 @@ function createResumePreview() {
             <li>Your Experience</li>
         </ul>
         <hr>
-        <h3>Education</h3>
-        <ul id="previewEducation">
-            <li>Your Education</li>
-        </ul>
-        <hr>
+       
         <h3>Projects</h3>
         <ul id="previewProjects">
             <li>Your Projects</li>
         </ul>
-    `;
+        <hr>
+       
+        <h3>Reference</h3>
+        <ul id="previewReference">
+            <li>Your Reference</li>
+        </ul>`;
     document.body.appendChild(resumePreview);
 }
 
@@ -101,4 +120,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const addProjectsBtn = document.getElementById('addProjectsBtn');
     addProjectsBtn.addEventListener('click', () => addInputBox('projects-container'));
+
+    const addHobbiesBtn = document.getElementById('addHobbiesBtn');
+    addHobbiesBtn.addEventListener('click', () => addInputBox('hobbies-container'));
+
+    const addReferenceBtn = document.getElementById('addReferenceBtn');
+    addReferenceBtn.addEventListener('click', () => addInputBox('reference-container'));
+
+    const addLanguagesBtn = document.getElementById('addLanguagesBtn');
+    addLanguagesBtn.addEventListener('click', () => addInputBox('languages-container'));
 });
