@@ -34,7 +34,7 @@ function addInputBox(containerId) {
     newInput.classList.add(`${containerId}-input`);
     const input = document.createElement('input');
     input.type = 'text';
-    input.style.width = '70%';
+    input.style.width = '100%';
     input.style.marginRight = '10px';
     input.oninput = updateResume;
     newInput.appendChild(input);
@@ -43,13 +43,50 @@ function addInputBox(containerId) {
 
 function generatePDF() {
     const resumeContent = document.getElementById('resumePreview');
-    console.log(resumeContent.innerHTML); // Debugging: Check if content is being captured
+    console.log(resumeContent.innerHTML);
 
-    // Generate the PDF
+   
     html2pdf().from(resumeContent).save();
 }
 
+function createResumePreview() {
+    const resumePreview = document.createElement('div');
+    resumePreview.className = 'resume-preview';
+    resumePreview.id = 'resumePreview';
+    resumePreview.innerHTML = `
+        <h2 id="previewName">Your Name</h2>
+        <div class="info">
+            <p id="previewEmail">Your Email</p>
+            <p id="previewPhone">Your Phone</p>
+            <p id="previewdob">Your DOB</p>
+        </div>
+        <hr>
+        <h3>Skills</h3>
+        <ul id="previewSkills">
+            <li>Your Skills</li>
+        </ul>
+        <hr>
+        <h3>Experience</h3>
+        <ul id="previewExperience">
+            <li>Your Experience</li>
+        </ul>
+        <hr>
+        <h3>Education</h3>
+        <ul id="previewEducation">
+            <li>Your Education</li>
+        </ul>
+        <hr>
+        <h3>Projects</h3>
+        <ul id="previewProjects">
+            <li>Your Projects</li>
+        </ul>
+    `;
+    document.body.appendChild(resumePreview);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
+    createResumePreview();
+
     const generateButton = document.getElementById('generateResumeBtn');
     generateButton.addEventListener('click', generatePDF);
 

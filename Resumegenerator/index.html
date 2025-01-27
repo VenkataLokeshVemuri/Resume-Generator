@@ -7,93 +7,65 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Resume Generator</h1>
-        <div class="form-container">
-            <form id="resumeForm">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" oninput="updateResume()" required>
+   
+    <h1>Welcome!!</h1>
+    <div class="form-container">
+       
+            
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" oninput="updateResume()" required>
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" oninput="updateResume()" required>
-               
-                <label for="dob">Date of Birth:</label>
-                <input type="date" id="dob" name="dob" oninput="updateResume()" required>
-               
-                <label for="phone">Phone:</label>
-                <input type="text" id="phone" name="phone" oninput="updateResume()" required>
-             
-                <label for="Education">Education:</label>
-                <div id="education-container" class="education-container">
-                    <div class="education-input">
-                        <input style="width: 70%; margin-right: 10px;" type="text" id="Education" name="Education" oninput="updateResume()" required>
-                    </div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" oninput="updateResume()" required>
+           
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" oninput="updateResume()" required>
+           
+            <label for="phone">Phone:</label>
+            <input type="text" id="phone" name="phone" oninput="updateResume()" required>
+         
+            <label for="Education">Education:</label>
+            <div id="education-container" class="education-container">
+                <div class="education-input">
+                    <input  type="text" id="Education" name="Education" oninput="updateResume()" required>
                 </div>
-                <button type="button" id="addEducationBtn">Add</button>
-                  
-                <label for="skills">Skills:</label>
-                <div id="skills-container" class="skills-container">
-                    <div class="skills-input">
-                        <input style="width: 70%; margin-right: 10px;" type="text" id="skills" name="skills" oninput="updateResume()" required>
-                    </div>
-                </div>
-                <button type="button" id="addSkillsBtn">Add</button>
-
-                <label for="experience">Experience:</label>
-                <div id="experience-container" class="experience-container">
-                    <div class="experience-input">
-                        <input style="width: 70%; margin-right: 10px;" type="text" id="experience" name="experience" oninput="updateResume()" required>
-                    </div>
-                </div>
-                <button type="button" id="addExperienceBtn">Add</button>
-
-                <label for="projects">Projects:</label>
-                <div id="projects-container" class="projects-container">
-                    <div class="projects-input">
-                        <input style="width: 70%; margin-right: 10px;" type="text" id="projects" name="projects" oninput="updateResume()" required>
-                    </div>
-                </div>
-                <button type="button" id="addProjectsBtn">Add</button>
-
-                <hr>
-                <button type="button" id="generateResumeBtn">Generate Resume</button>
-            </form>
-        </div>
-<br><br>
-        <div class="resume-preview" id="resumePreview">
-            <h2 id="previewName">Your Name</h2>
-            <div class="info">
-                <p id="previewEmail">Your Email</p>
-                <p id="previewPhone">Your Phone</p>
-                <p id="previewdob">Your DOB</p>
             </div>
+            <button type="button" id="addEducationBtn">Add</button>
+              
+            <label for="skills">Skills:</label>
+            <div id="skills-container" class="skills-container">
+                <div class="skills-input">
+                    <input type="text" id="skills" name="skills" oninput="updateResume()" required>
+                </div>
+            </div>
+            <button type="button" id="addSkillsBtn">Add</button>
+
+            <label for="experience">Experience:</label>
+            <div id="experience-container" class="experience-container">
+                <div class="experience-input">
+                    <input type="text" id="experience" name="experience" oninput="updateResume()" required>
+                </div>
+            </div>
+            <button type="button" id="addExperienceBtn">Add</button>
+
+            <label for="projects">Projects:</label>
+            <div id="projects-container" class="projects-container">
+                <div class="projects-input">
+                    <input type="text" id="projects" name="projects" oninput="updateResume()" required>
+                </div>
+            </div>
+            <button type="button" id="addProjectsBtn">Add</button>
+
             <hr>
-            <h3>Skills</h3>
-            <ul id="previewSkills">
-                <li>Your Skills</li>
-            </ul>
-            <hr>
-            <h3>Experience</h3>
-            <ul id="previewExperience">
-                <li>Your Experience</li>
-            </ul>
-            <hr>
-            <h3>Education</h3>
-            <ul id="previewEducation">
-                <li>Your Education</li>
-            </ul>
-            <hr>
-            <h3>Projects</h3>
-            <ul id="previewProjects">
-                <li>Your Projects</li>
-            </ul>
-        </div>
+            <button type="button" id="generateResumeBtn">Generate Resume</button>
+       
     </div>
+    <br>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" 
     integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" 
     crossorigin="anonymous" 
     referrerpolicy="no-referrer"></script>
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
