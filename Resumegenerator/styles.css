@@ -1,0 +1,20 @@
+.resume-preview{
+  font-family:Arial Narrow, sans-serif;
+  padding: 10px;
+  top: 0%;
+}
+.resume-preview h2{
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-size: 24px; 
+  text-align: center;
+}
+
+.resume-preview h3{
+  font-size: 20px;
+}
+.resume-preview li,p{
+  font-size: 16px;  
+}
+.resume-preview ul{
+  list-style-type: square;
+}
