@@ -1,0 +1,130 @@
+body {
+  background-image: linear-gradient(80deg, rgb(23, 38, 57), rgb(142, 163, 192));
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+  margin-top: 20px;
+}
+
+#generateResumeBtn {
+  display: block;
+  margin: 0 auto;
+  width: 150px;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0px;
+  padding: 0px;
+}
+
+.form-container {
+  background-color: rgba(255, 255, 255, 0.15);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.form-container label {
+  display: block;
+  margin-top: 10px;
+  color: white;
+}
+
+.form-container input {
+  width: 90%;
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-container button {
+  display: block;
+  
+  padding: 10px;
+  background-image: linear-gradient(80deg, rgb(142, 163, 192),rgb(23, 38, 57));
+  width: 20%;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.form-container button:hover {
+  background-image: linear-gradient(80deg, rgb(63, 73, 92),rgb(29, 29, 30));
+
+}
+
+.resume-preview {
+  background-color: white;
+  padding: 20px;
+  top: 0px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.resume-preview h2{
+  font-size: 30px;
+  text-align: center;
+} .resume-preview h3 {
+  font-size: 20px;
+}
+.resume-preview #previewReference li{
+  list-style-type:none;
+}
+.resume-preview ul {
+  list-style-type:square;
+}
+
+.resume-preview li {
+  
+  margin-bottom: 5px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+
+@media (max-width: 768px) {
+  .info {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .form-container, .resume-preview {
+    padding: 15px;
+    margin: 10px;
+  }
+
+  .form-container button {
+    width: 20%;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5em;
+  }
+
+  .form-container, .resume-preview {
+    padding: 10px;
+    margin: 5px;
+  }
+
+  .form-container input, .form-container button {
+    font-size: 0.9em;
+  }
+}
